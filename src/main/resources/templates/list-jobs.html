@@ -12,10 +12,21 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-<!--    <table>-->
-<!--        <tr th:each = "choice : ${ListController.tableChoices}" th:text = "choice"></tr>-->
+    <table class="job-listing">
+        <tr th:each="job : ${jobs}">
+            <td >
+                <ul>
+                    <li th:text="'ID: ' + ${job.id}"></li>
+                </ul>
+            </td>
+            <td th:text="'Name: ' + ${job.name}"></td>
+            <td th:text="'Employer: ' + ${job.employer}"></td>
+            <td th:text="'Location: ' + ${job.location}"></td>
+            <td th:text="'Position Type: ' + ${job.positionType}"></td>
+            <td th:text="'Core Competency: ' + ${job.coreCompetency}"></td>
+        </tr>
+    </table>
 
-<!--    </table>-->
 </div>
 
 </body>
